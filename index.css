@@ -1,0 +1,134 @@
+/*==================
+ Section latest work
+  ============== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* for card  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+.latest-work-section {
+  padding: 3em 0;
+}
+
+.cardBox {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+    rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+}
+.latest-work-section-card {
+  position: absolute;
+  width: 97%;
+  height: 97%;
+  background-image: url(https://source.unsplash.com/bs2Ba7t69mM);
+  border-radius: 20px;
+  background-position: center;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 40%) 0px 30px 60px -12px inset,
+    rgb(0 0 0 / 50%) 0px 18px 36px -18px inset;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: #ccc;
+}
+.two {
+  background-image: url(https://source.unsplash.com/QQ9LainS6tI);
+}
+.three {
+  background-image: url(https://source.unsplash.com/VzJjPuk53sk);
+}
+.four {
+  background-image: url(https://source.unsplash.com/dYEuFB8KQJk);
+}
+.latest-work-section-card .latest-work-title h2,
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 800;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+span {
+  top: 75%;
+}
+
+.latest-work-section-card .latest-work-content h3 {
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+.latest-work-section-card .latest-work-content .latest-work-button {
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+.latest-work-button {
+  padding: 0.8em 1.2em;
+  border-radius: 0.2em;
+  background-color: #ff0080;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.latest-work-button:hover {
+  color: inherit;
+}
+.latest-work-section-card .latest-work-content {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.latest-work-section-card:hover .latest-work-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cardBox::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 150%;
+  background: #40e0d0;
+  background: -webkit-linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
+  background: linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
+  animation: glowing01 5s linear infinite;
+  transform-origin: center;
+  animation: glowing 5s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
